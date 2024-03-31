@@ -11,7 +11,8 @@
   select SUM(data_length) sod, SUM(index_length) soi
   from INFORMATION_SCHEMA.TABLES) t1;
 ```
-![12-5-1](./hw-12-5/12-5-1.png)
+![image](https://github.com/Wernigerode23/index/assets/153208339/c3719214-4001-4ae4-954b-d761aa60ef76)
+
 
 ---
 
@@ -24,7 +25,8 @@ from payment p, rental r, customer c, inventory i, film f
 where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and r.customer_id = c.customer_id and i.inventory_id = r.inventory_id
 ```
 - перечислите узкие места;
-![12-5-2-1](./hw-12-5/12-5-2-1.png)
+![image](https://github.com/Wernigerode23/index/assets/153208339/e2664309-21a1-451d-9189-98fff3a82ad2)
+
 Узкие места наблюдаются в момент использования оконных функций OVER и PARTITION BY, а  так же в  момент фильтрации вывода, в сравнении колонок из разных таблиц.
 - оптимизируйте запрос: внесите корректировки по использованию операторов, при необходимости добавьте индексы. Так же избыточная таблица - film.
 ```sql
