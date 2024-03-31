@@ -39,4 +39,5 @@ join inventory i on i.inventory_id = r.inventory_id
 where date(p.payment_date) = '2005-07-30' 
 group by concat(c.last_name, ' ', c.first_name); 
 ```
-![12-5-2-2](./hw-12-5/12-5-2-2.png)
+![image](https://github.com/Wernigerode23/index/assets/153208339/45128596-05cf-4c85-9104-5fee227efc6a)
+
